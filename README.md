@@ -1,28 +1,17 @@
 # DS-Project
 
-<!-- PROJECT LOGO -->
 <a name="readme-top"></a>
 <br />
 <div align="center">
-
-  ![Logo](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/9c0d4995-784c-43b8-9a5b-3f4abc74163f)
-
   <p align="center">
-    Library Management System Project made for the OOP course at Faculty of Computer and Information Science, Ain Shams University.
+    Travel Guide Project made for the OOP course at Faculty of Computer and Information Science, Ain Shams University.
     <br />
     <br />
-    <a href="https://github.com/ELDA7EE7/OOP-project-2.0"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ELDA7EE7/OOP-project-2.0">View Demo</a>
-    ·
-    <a href="https://github.com/ELDA7EE7/OOP-project-2.0/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/ELDA7EE7/OOP-project-2.0/issues">Request Feature</a>
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -32,8 +21,7 @@
     <li>
       <a href="#system-description">System Description</a>
       <ul>
-        <li><a href="#user-functionalities">User Functionalities</a></li>
-        <li><a href="#admin-functionalities">Admin Functionalities</a></li>
+        <li><a href="#classes-and-methods">Classes and Methods</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -43,112 +31,88 @@
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
 # About The Project
 
 ![Splash Screen](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/86c677a2-2aae-4df3-a6e2-2931f28fd2c9)
 
-
-This comprehensive and feature-rich system is designed to streamline the operations of a bookstore, offering both users and administrators an intuitive and efficient platform. With functionalities ranging from user registration and book browsing to detailed order and borrowing histories, this system aims to provide a seamless experience for both customers and bookstore administrators.
+This comprehensive and feature-rich system is designed to streamline the process of planning travel routes between countries, offering both users and administrators an intuitive and efficient platform. With functionalities ranging from adding and deleting countries and travel paths to searching for paths between countries with specific constraints, this system aims to provide a seamless experience for both travelers and administrators.
 
 ### Built With
 
-* [![Java][Java.js]][Java-url]
+* [![C++][C++.js]][C++-url]
+* [![Qt][Qt.js]][Qt-url]
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 # System Description
 
-### User Functionalities:
-#### •	Registration: New users can create an account by providing their name and email address. The system generates a unique customer ID and stores it along with the user's information.
-#### •	Login: Existing users can enter their email address and password to access the system.
-#### •	Browsing and Searching: Users can browse through the available books in various ways:
-* Home page: See featured books and best deals.
-* Categories screen: View books categorized by genre, author, or other criteria.
-* Search screen: Search for books by title or author keyword.
-#### •	Book details: Users can view details of a specific book, including title, author, publication year, price, description, and availability status. They can also:
-*	Add to cart: Add the book to their shopping cart for purchase.
-*	Borrow (if available): Registered users can borrow available books. The system records the transaction with the borrow date and sets a due date for return.
-*	Rate and review: Leave a rating and review for the book, visible to other users.
-#### •	Shopping cart: Users can manage their shopping cart, including:
-*	Viewing the list of added books, quantity, and total price.
-*	Updating the quantity of each book.
-*	Applying promo codes (if applicable).
-*	Choosing a payment method (cash on delivery or credit card).
-#### •	Order history: Registered users can view their past orders, including the date, books purchased, and total amount paid.
-#### •	Borrowing history: Registered users can view their borrowing history, including the borrowed books, borrow and return dates, and any associated fines.
+### Classes and Methods
 
-### Admin Functionalities:
-#### •	Book management:
-*	Add new books: Add new books to the system by providing details like title, author, publication year, price, and availability.
-*	Update book information: Edit existing book details like price, availability, or description.
-*	Remove books: Remove books from the system that are no longer available or needed.
-#### •	Borrower management:
-*	Add new borrowers: Register new borrowers with their name and contact information.
-*	Update borrower details: Edit existing borrower information like contact details or address.
-*	Remove borrowers: Remove borrowers from the system who are no longer active or have violated policies.
+#### Travel Method
+- **Public Arguments:**
+  - `String Name`: Name of Transportation
+  - `int Cost`: Cost of Transportation
+- **Constructors:**
+  - Default Constructor
+  - Parameterized Constructor
+
+#### Graph
+- **Private Arguments:**
+  - `unordered_map<string, set<pair<TravelMethod, string>>> Graph`: To save Graph
+- **Private Methods:**
+  - `Write()`: Writes the graph data to a file
+  - `Read()`: Reads the graph data from a file
+- **Public Void Methods:**
+  - `Add Path(String country1, String country2, String methodName, int cost)`: Adds a new path from `country1` to `country2`
+  - `Update Path(String country1, String country2, String methodName, String newMethodName, int newCost)`: Updates the path between `country1` and `country2`
+  - `Delete Path(String country1, String country2, String methodName)`: Deletes the path between `country1` and `country2`
+  - `Add Country(String country)`: Adds a new country to the graph
+  - `Delete Country(String country)`: Deletes a country from the graph
+- **Public Bool Method:**
+  - `Is Complete()`: Returns `true` when the graph is complete
+- **Public List<String> Methods:**
+  - `All Countries()`: Returns all countries in the graph
+  - `BFS(String StartNode, unordered_map<string, bool> visited)`: Traverses the graph using the BFS algorithm
+  - `DFS(String StartNode, unordered_map<string, bool> visited)`: Traverses the graph using the DFS algorithm
+- **Public Method to Get Paths:**
+  - `set<pair<long, list<pair<TravelMethod, string>>>> Get Paths(String country1, String country2, Long Cost, unordered_map<string, bool> visited)`: Returns all paths between `country1` and `country2` that don’t exceed the maximum cost, sorted by cost
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
-
-<!-- USAGE EXAMPLES -->
 # Usage
 
 ## Input and Output Scenarios:
-### Login 
-* Input: User enters their email address and password.
-* Output: System verifies credentials. If successful, system displays the user's home page. If unsuccessful, system displays an error message.
-  
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٢ ١٥](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/6d4253b7-93ac-427c-8f95-2f3a65329cf3)
 
+### Get Paths
+* **Input:** User enters `Country 1` and `Country 2`
+* **Output:** Displays all paths between the entered countries within the maximum cost
 
-### Registration 
-* Input: User enters their name and email address. User creates a password.
-* Output: System creates a new customer account with a unique ID.
+### Graph Info
+* **Output:** Displays all countries in the graph
 
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٢ ٢٧](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/e307c6da-ee36-407e-9a82-11e66d428b55)
+### Traverse
+* **Input:** User enters `Country 1` and `Country 2`
+* **Output:** Displays all paths between the entered countries, sorted by nearest first or farthest first from `Country 1`
 
-
-### Searching for a book
-* Input: User types a keyword (title or author) in the search bar.
-* Output: System displays a list of matching books with titles, authors.
-
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٦ ١٨](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/389ec628-ae0d-43e8-9426-69cf9316f417)
-
-
-### Borrowing a book
-* Input: User clicks the "Borrow" button on a book's details page.
-* Output: System checks book availability. If available, system records the borrowing transaction with the borrow date and due date. System displays a confirmation message and sends a notification to the user. If not available, system displays a message indicating the book is unavailable and may offer options to reserve or be notified when it becomes available.
-
-![image](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/957568c5-2331-4fa1-a83b-6493efff0fd1)
-
-
-### Adding a book to the shopping cart
-* Input: User clicks the "Add to Cart" button on a book's details page. User specifies quantity (if applicable).
-* Output: System adds the book to the user's shopping cart, updating the total price.
-
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٨ ٣٦](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/6ad87b44-38fb-4556-a5b7-71fcec887a33)
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٧ ٥٤](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/6f4653b7-befd-4eb0-ba57-25eb5cce4af8)
-
-
-### Adding a new book
-* Input: Admin enters book details: title, author, publication year, price, availability, and description.
-* Output: System creates a new book object and adds it to the catalog.
-
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٤ ٢٩](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/4d19c18a-ad1c-4174-8816-81e6e687e336)
-
-
-### Updating book information
-* Input: Admin selects a book to update. Admin modifies desired fields (e.g., price, availability).
-* Output: System updates the book's information in the catalog.
-
-![Screenshot ١٢-٢٧-٢٠٢٣ ٠٧ ٠٤ ٢٠](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/84d174c6-62d4-4a4a-814b-e33f43854284)
-
+### Options:
+1. **Add Path**
+   * **Input:** User enters `Country 1`, `Country 2`, `Cost`, and `Transportation Method`
+   * **Output:** Adds a new path between the entered countries
+2. **Delete Path**
+   * **Input:** User enters `Country 1`, `Country 2`, and `Transportation Method`
+   * **Output:** Deletes the path between the entered countries
+3. **Update Path**
+   * **Input:** User enters `Country 1`, `Country 2`, `Old Transportation Method`, `New Transportation Method`, and `New Cost`
+   * **Output:** Updates the path between the entered countries
+4. **Add Country**
+   * **Input:** User enters the `Country` name
+   * **Output:** Adds a new country to the graph
+5. **Delete Country**
+   * **Input:** User enters the `Country` name
+   * **Output:** Deletes the country from the graph
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-<!-- CONTRIBUTING -->
 # Extra Documentation and Studies
 
 ### [UML Diagram](https://drive.google.com/file/d/15DKX1cpXYcr4WeUYd-v6bjtgYUV0-6Rs/view?usp=sharing)
@@ -157,7 +121,6 @@ This comprehensive and feature-rich system is designed to streamline the operati
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-<!-- CONTRIBUTING -->
 # Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -173,9 +136,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
-
-<!-- LICENSE -->
 # License
 
 MIT License
@@ -202,24 +162,9 @@ SOFTWARE.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Java.js]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
-[Java-url]: https://www.java.com/en/
+[C++.js]: https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white
+[C++-url]: https://www.cplusplus.com/
+[Qt.js]: https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=Qt&logoColor=white
+[Qt-url]: https://www.qt.io/
