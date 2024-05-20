@@ -79,8 +79,8 @@ This comprehensive and feature-rich system is designed to streamline the process
 # Usage
 
 ## Input and Output Scenarios:
+# **Add Country**
 ![Add Country](Add_country.png)
-* **Add Country**
   * **Input:** User enters the `Country` name
   * **Output:** Adds a new country to the graph
 
