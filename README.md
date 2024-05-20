@@ -25,9 +25,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#extra-documentation-and-studies">Extra Documentation and Studies</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -86,7 +83,6 @@ This comprehensive and feature-rich system is designed to streamline the process
 ### Get Paths
 * **Input:** User enters `Country 1` and `Country 2`
 * **Output:** Displays all paths between the entered countries within the maximum cost
-
 ![Graph Image](Graph_info.png)
 ### Graph Info
 * **Output:** Displays all countries in the graph
@@ -94,25 +90,24 @@ This comprehensive and feature-rich system is designed to streamline the process
 ### Traverse
 * **Input:** User enters `Country 1` and `Country 2`
 * **Output:** Displays all paths between the entered countries, sorted by nearest first or farthest first from `Country 1`
-
 ### Options:
- ![Graph Image](Add_path.png)
+![Graph Image](Add_path.png)
 1. **Add Path**
    * **Input:** User enters `Country 1`, `Country 2`, `Cost`, and `Transportation Method`
    * **Output:** Adds a new path between the entered countries
- ![Graph Image](Delete_path.png)
+![Graph Image](Delete_path.png)
 2. **Delete Path**
    * **Input:** User enters `Country 1`, `Country 2`, and `Transportation Method`
    * **Output:** Deletes the path between the entered countries
- ![Graph Image](Update_path.png)
+![Graph Image](Update_path.png)
 3. **Update Path**
    * **Input:** User enters `Country 1`, `Country 2`, `Old Transportation Method`, `New Transportation Method`, and `New Cost`
    * **Output:** Updates the path between the entered countries
- ![Graph Image](Add_country.png)
+![Graph Image](Add_country.png)
 4. **Add Country**
    * **Input:** User enters the `Country` name
    * **Output:** Adds a new country to the graph
- ![Graph Image](Delete_country.png)
+![Graph Image](Delete_country.png)
 5. **Delete Country**
    * **Input:** User enters the `Country` name
    * **Output:** Deletes the country from the graph
