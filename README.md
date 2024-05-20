@@ -79,38 +79,38 @@ This comprehensive and feature-rich system is designed to streamline the process
 # Usage
 
 ## Input and Output Scenarios:
+![Graph Image](Add_country.png)
+* **Add Country**
+   * **Input:** User enters the `Country` name
+   * **Output:** Adds a new country to the graph
+![Graph Image](Add_path.png)
+* **Add Path**
+   * **Input:** User enters `Country 1`, `Country 2`, `Cost`, and `Transportation Method`
+   * **Output:** Adds a new path between the entered countries
+![Graph Image](Delete_country.png)
+* **Delete Country**
+   * **Input:** User enters the `Country` name
+   * **Output:** Deletes the country from the graph
+![Graph Image](Delete_path.png)
+* **Delete Path**
+   * **Input:** User enters `Country 1`, `Country 2`, and `Transportation Method`
+   * **Output:** Deletes the path between the entered countries
+![Graph Image](Update_path.png)
+* **Update Path**
+   * **Input:** User enters `Country 1`, `Country 2`, `Old Transportation Method`, `New Transportation Method`, and `New Cost`
+   * **Output:** Updates the path between the entered countries
+![Graph Image](Graph_info.png)
+### Graph Info
+* **Output:** Displays all countries in the graph
 ![Graph Image](Get_paths.png)
 ### Get Paths
 * **Input:** User enters `Country 1` and `Country 2`
 * **Output:** Displays all paths between the entered countries within the maximum cost
-![Graph Image](Graph_info.png)
-### Graph Info
-* **Output:** Displays all countries in the graph
 ![Graph Image](Map_traverse.png)
 ### Traverse
 * **Input:** User enters `Country 1` and `Country 2`
 * **Output:** Displays all paths between the entered countries, sorted by nearest first or farthest first from `Country 1`
 ### Options:
-![Graph Image](Add_path.png)
-1. **Add Path**
-   * **Input:** User enters `Country 1`, `Country 2`, `Cost`, and `Transportation Method`
-   * **Output:** Adds a new path between the entered countries
-![Graph Image](Delete_path.png)
-2. **Delete Path**
-   * **Input:** User enters `Country 1`, `Country 2`, and `Transportation Method`
-   * **Output:** Deletes the path between the entered countries
-![Graph Image](Update_path.png)
-3. **Update Path**
-   * **Input:** User enters `Country 1`, `Country 2`, `Old Transportation Method`, `New Transportation Method`, and `New Cost`
-   * **Output:** Updates the path between the entered countries
-![Graph Image](Add_country.png)
-4. **Add Country**
-   * **Input:** User enters the `Country` name
-   * **Output:** Adds a new country to the graph
-![Graph Image](Delete_country.png)
-5. **Delete Country**
-   * **Input:** User enters the `Country` name
-   * **Output:** Deletes the country from the graph
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
