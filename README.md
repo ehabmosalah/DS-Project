@@ -82,83 +82,40 @@ This comprehensive and feature-rich system is designed to streamline the process
 # Usage
 
 ## Input and Output Scenarios:
-
+![Graph Image](Get_paths.png)
 ### Get Paths
 * **Input:** User enters `Country 1` and `Country 2`
 * **Output:** Displays all paths between the entered countries within the maximum cost
 
+![Graph Image](Graph_info.png)
 ### Graph Info
 * **Output:** Displays all countries in the graph
-
+![Graph Image](Map_traverse.png)
 ### Traverse
 * **Input:** User enters `Country 1` and `Country 2`
 * **Output:** Displays all paths between the entered countries, sorted by nearest first or farthest first from `Country 1`
 
 ### Options:
+ ![Graph Image](Add_path.png)
 1. **Add Path**
    * **Input:** User enters `Country 1`, `Country 2`, `Cost`, and `Transportation Method`
    * **Output:** Adds a new path between the entered countries
+ ![Graph Image](Delete_path.png)
 2. **Delete Path**
    * **Input:** User enters `Country 1`, `Country 2`, and `Transportation Method`
    * **Output:** Deletes the path between the entered countries
+ ![Graph Image](Update_path.png)
 3. **Update Path**
    * **Input:** User enters `Country 1`, `Country 2`, `Old Transportation Method`, `New Transportation Method`, and `New Cost`
    * **Output:** Updates the path between the entered countries
+ ![Graph Image](Add_country.png)
 4. **Add Country**
    * **Input:** User enters the `Country` name
    * **Output:** Adds a new country to the graph
+ ![Graph Image](Delete_country.png)
 5. **Delete Country**
    * **Input:** User enters the `Country` name
    * **Output:** Deletes the country from the graph
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-# Extra Documentation and Studies
-
-### [UML Diagram](https://drive.google.com/file/d/15DKX1cpXYcr4WeUYd-v6bjtgYUV0-6Rs/view?usp=sharing)
-### [Brand Guidelines](https://www.behance.net/gallery/187621769/ByteBibliotheca-Brand-Guidelines)
-### [UI / UX Case Study](https://www.behance.net/gallery/187613467/ByteBibliotheca-UI-UX-Case-Study)
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-# Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-# License
-
-MIT License
-
-Copyright (c) [2023] [ByteBibliotheca]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
