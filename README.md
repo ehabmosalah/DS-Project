@@ -33,7 +33,7 @@
 
 # About The Project
 
-![Splash Screen](https://github.com/ELDA7EE7/OOP-project-2.0/assets/114913488/86c677a2-2aae-4df3-a6e2-2931f28fd2c9)
+![Graph Image](Main_window.png)
 
 This comprehensive and feature-rich system is designed to streamline the process of planning travel routes between countries, offering both users and administrators an intuitive and efficient platform. With functionalities ranging from adding and deleting countries and travel paths to searching for paths between countries with specific constraints, this system aims to provide a seamless experience for both travelers and administrators.
 
