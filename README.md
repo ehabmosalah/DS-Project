@@ -106,7 +106,7 @@ This comprehensive and feature-rich system is designed to streamline the process
   ### Get Paths
   * **Input:** User enters `Country 1` and `Country 2`
   * **Output:** Displays all paths between the entered countries within the maximum cost
-![Graph Image](Map_traverse.png)
+   ![Graph Image](Map_traverse.png)
   ### Traverse
   * **Input:** User enters `Country 1` and `Country 2`
   * **Output:** Displays all paths between the entered countries, sorted by nearest first or farthest first from `Country 1`
